@@ -1,0 +1,13 @@
+seed,generator,scenario,real_train_size,synthetic_size,neg_ratio,pos_ratio,file_name
+41,CTGAN,10x,319,3190,0.5,0.5,ctgan_10x_seed41.csv
+41,CTGAN,30x,319,9570,0.5,0.5,ctgan_30x_seed41.csv
+41,TVAE,10x,319,3190,0.5,0.5,tvae_10x_seed41.csv
+41,TVAE,30x,319,9570,0.5,0.5,tvae_30x_seed41.csv
+42,CTGAN,10x,319,3190,0.5,0.5,ctgan_10x_seed42.csv
+42,CTGAN,30x,319,9570,0.5,0.5,ctgan_30x_seed42.csv
+42,TVAE,10x,319,3190,0.5,0.5,tvae_10x_seed42.csv
+42,TVAE,30x,319,9570,0.5,0.5,tvae_30x_seed42.csv
+46,CTGAN,10x,319,3190,0.5,0.5,ctgan_10x_seed46.csv
+46,CTGAN,30x,319,9570,0.5,0.5,ctgan_30x_seed46.csv
+46,TVAE,10x,319,3190,0.5,0.5,tvae_10x_seed46.csv
+46,TVAE,30x,319,9570,0.5,0.5,tvae_30x_seed46.csv
