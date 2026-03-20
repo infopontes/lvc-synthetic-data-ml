@@ -51,12 +51,10 @@ All experiments should be run with fixed seeds, explicit preprocessing pipelines
 
 ## Suggested structure
 
-```text
-data/
-notebooks/
-src/
+data/  
+notebooks/  
+src/  
 results/
-```
 
 ## Author
 
@@ -66,3 +64,7 @@ Federal University of Piauí (UFPI), Brazil
 
 📧 Email: marcelo.rodrigues@ufpi.edu.br
 🔗 GitHub: https://github.com/infopontes
+
+## License
+
+MIT License
