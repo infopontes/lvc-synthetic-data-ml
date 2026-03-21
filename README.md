@@ -256,3 +256,8 @@ This study demonstrates that:
 ## 📜 License
 
 MIT License
+
+
+## 📘 Full Documentation
+
+👉 https://infopontes.github.io/lvc-synthetic-data-ml/
