@@ -3,9 +3,6 @@
 **Author:** Marcelo Pontes Rodrigues
 **Program:** Graduate Program in Technologies Applied to Regional Animal Health – UFPI
 
-📧 Email: marcelo.rodrigues@ufpi.edu.br
-🔗 GitHub: https://github.com/infopontes
-
 ---
 
 ## 📌 Project Overview
@@ -15,6 +12,7 @@ This project implements a complete Data Science workflow applied to **Canine Vis
 * Machine Learning
 * Synthetic Data Generation (CTGAN, TVAE)
 * Class Imbalance Handling
+* Threshold Optimization
 * Explainable Artificial Intelligence (XAI)
 
 ---
@@ -25,7 +23,7 @@ To evaluate whether **synthetic tabular data** can improve model performance in:
 
 * Small datasets
 * Imbalanced datasets
-* Epidemiological scenarios
+* Epidemiological screening scenarios
 
 ---
 
@@ -39,7 +37,7 @@ The dataset contains clinical records of dogs investigated for CVL.
 
 ### Features
 
-* Clinical signs (e.g., alopecia, lesions, mucosa color)
+* Clinical signs (alopecia, lesions, mucosa color, etc.)
 * Animal characteristics (sex, breed)
 
 ---
@@ -48,6 +46,7 @@ The dataset contains clinical records of dogs investigated for CVL.
 
 * Small dataset (456 samples)
 * Class imbalance (~30% positive)
+* High cost of false negatives (missed infected animals)
 
 ---
 
@@ -96,8 +95,8 @@ Using SDV:
 
 Scenarios:
 
-* 10x synthetic dataset
-* 30x synthetic dataset
+* 10x dataset
+* 30x dataset
 * Balanced classes (50/50)
 
 ---
@@ -107,23 +106,49 @@ Scenarios:
 * Training: synthetic data
 * Testing: real holdout data
 
+This evaluates real-world generalization.
+
+---
+
+### 6. Threshold Optimization
+
+After selecting the best model, threshold tuning was applied:
+
+* Default threshold: `0.5`
+* Optimized threshold: `0.35`
+
+Goal:
+
+* Maximize recall
+* Minimize false negatives
+
 ---
 
 ## 📊 Key Results
 
-* Baseline recall ≈ 0.26
-* Balanced data recall ≈ 0.50
-* Synthetic data (CTGAN 30x + KNN):
+### Baseline
 
-  * **Recall ≈ 0.51**
+* Recall ≈ 0.26 ❌
 
-### 🔍 Interpretation
+### Balanced Data
 
-Synthetic data:
+* Recall ≈ 0.50 ✔
 
-* Improved recall compared to baseline
-* Matched traditional balancing methods
-* Reduced false negatives
+### Synthetic Data (CTGAN 30x + KNN)
+
+* Recall ≈ 0.51 ✔
+
+---
+
+## 🔥 Threshold Optimization Results
+
+* Recall increased to **0.93**
+* False negatives reduced from **21 → 3**
+
+### Interpretation
+
+* Significant improvement in sensitivity
+* Model becomes suitable for screening
 
 ---
 
@@ -134,19 +159,31 @@ Synthetic data:
 
 However:
 
-> The model is suitable for screening scenarios where sensitivity is more important than specificity.
+> The model is not intended for final diagnosis, but for epidemiological screening.
 
 ---
 
-## 🔬 Statistical Validation
+## 📊 Evaluation Metrics
 
-Synthetic data were validated using:
+### ROC Curve
+
+* Evaluates global discrimination
+* Shows limited separability
+
+### Precision-Recall Curve
+
+* More suitable for imbalanced data
+* Shows that recall can increase without major precision loss
+
+---
+
+## 🔬 Statistical Validation of Synthetic Data
 
 * Jensen-Shannon Distance (JSD)
 * Total Variation Distance (TVD)
 * Chi-square test
 
-Results indicate strong similarity between real and synthetic distributions.
+Results confirm strong similarity between real and synthetic distributions.
 
 ---
 
@@ -198,20 +235,21 @@ jupyter lab
 
 ## 🔁 Reproducibility
 
-* Fixed random seeds
+* Fixed seeds
 * Stratified splits
-* Explicit preprocessing pipelines
-* Saved results in CSV
+* Controlled preprocessing
+* Saved results
 
 ---
 
-## 📌 Conclusion
+## 📌 Final Conclusion
 
-Synthetic data can:
+This study demonstrates that:
 
-* Improve recall in small datasets
-* Match traditional imbalance techniques
-* Support epidemiological screening models
+* Synthetic data can improve recall in small datasets
+* CTGAN outperforms TVAE in this context
+* Threshold tuning dramatically improves clinical usefulness
+* The model is effective for **screening**, not diagnosis
 
 ---
 
