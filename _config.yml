@@ -1,0 +1,32 @@
+title: LVC Synthetic Data ML
+description: Documentation for machine learning, synthetic data generation, and explainable AI applied to Canine Visceral Leishmaniasis (CVL)
+theme: just-the-docs
+
+url: https://infopontes.github.io
+baseurl: /lvc-synthetic-data-ml
+
+aux_links:
+  GitHub Repository: https://github.com/infopontes/lvc-synthetic-data-ml
+
+nav_enabled: true
+search_enabled: true
+heading_anchors: true
+
+color_scheme: light
+
+footer_content: "LVC Synthetic Data ML — Marcelo Pontes Rodrigues, UFPI"
+
+callouts:
+  note:
+    title: Note
+    color: blue
+  warning:
+    title: Warning
+    color: yellow
+  highlight:
+    title: Highlight
+    color: green
+
+just_the_docs:
+  custom_css:
+    - assets/css/custom.css

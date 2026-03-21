@@ -1,13 +1,42 @@
-# Synthetic Data
+---
+title: Synthetic Data Generation
+nav_order: 3
+---
 
-This section describes the generation of synthetic data using CTGAN and TVAE.
+# Synthetic Data Generation
 
-## Approach
+## Overview
 
-- CTGAN and TVAE were used
-- Data was expanded to 10x and 30x
-- Class balancing was enforced
+Synthetic data was generated to address limitations of small sample size and class imbalance.
 
-## Key Finding
+## Methods Used
 
-CTGAN (30x) produced the best performance when evaluated on real data.
+- CTGAN
+- TVAE
+
+## Generation Strategy
+
+- Dataset expansion: 10x and 30x
+- Class balancing: 50/50 (positive/negative)
+
+## Evaluation Approach
+
+Synthetic datasets were evaluated by training models on synthetic data and testing on real data.
+
+## Key Findings
+
+- CTGAN outperformed TVAE
+- 30x generation produced better results than 10x
+- Synthetic data preserved relevant feature distributions
+
+## Statistical Validation
+
+- Jensen-Shannon Distance (JSD)
+- Total Variation Distance (TVD)
+- Chi-square tests
+
+Results indicated strong similarity between real and synthetic datasets.
+
+## Conclusion
+
+Synthetic data is a viable alternative to traditional imbalance techniques and can improve model performance in small epidemiological datasets.

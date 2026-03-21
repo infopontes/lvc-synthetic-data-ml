@@ -1,19 +1,45 @@
+---
+title: Explainability (XAI)
+nav_order: 6
+---
+
 # Explainable AI (XAI)
 
-## SHAP
+## Overview
 
-Used for global and local explanations.
+Explainability was applied to understand model decisions and validate clinical relevance.
 
-Key features:
+## Methods
+
+- SHAP
+- LIME
+
+## SHAP Analysis
+
+Global feature importance identified:
 
 - Alopecia
 - Skin lesions
 - Coat condition
+- Mucosal alterations
+- Nutritional state
 
-## LIME
+## Local Explanation
 
-Used for local explanation of individual predictions.
+SHAP and LIME both showed that predictions are based on combinations of clinical features rather than single variables.
+
+## Consistency
+
+Both methods produced consistent explanations, reinforcing model reliability.
+
+## Clinical Interpretation
+
+The model relies on features aligned with known clinical manifestations of CVL.
 
 ## Conclusion
 
-The model relies on clinically relevant features.
+Explainability analysis confirms that:
+
+- synthetic data preserved meaningful relationships
+- the model is interpretable
+- predictions are clinically coherent
